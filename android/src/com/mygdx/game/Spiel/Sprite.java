@@ -7,11 +7,9 @@ import android.graphics.Canvas;
  * Created by Moers on 13.05.16.
  */
 public class Sprite {
-    // private int x = 0;
-    //private int y = 0;
+    private int x = 0;
+    private int y = 0;
     private int sprung;
-    private int x;
-    private int y;
     private int a;
     private int b;
     private boolean kante;
@@ -38,8 +36,17 @@ public class Sprite {
         this.width = bmp.getWidth();
         this.height = bmp.getHeight();
 
+        //Random rnd = new Random();
+        //x = rnd.nextInt(theGameView.getWidth() - width);
+        //y = rnd.nextInt(theGameView.getHeight() - height);
+        x = -30;
+        x=-30+theGameView.getWidth()/10*1;
+        //     y = theGameView.getHeight() - height - 50;
         x=-30+theGameView.getWidth()/10*1;
         y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*8;
+
+        //ySpeed = rnd.nextInt(10) - 4;
+        //(xSpeed = rnd.nextInt(10) - 4;
         ySpeed = 0;
         xSpeed = 0;
     }

@@ -14,6 +14,7 @@ import com.mygdx.game.R;
 public class nickname extends Activity {
     private EditText editTextNickname;
     private TextView textViewNick;
+    private TextView textView2;
     private RadioButton radioButtonGruen;
     private RadioButton radioButtonBlau;
     private RadioButton radioButtonRot;
@@ -24,6 +25,7 @@ public class nickname extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nickname);
         textViewNick = (TextView) findViewById(R.id.textViewNick);
+        textView2 = (TextView) findViewById(R.id.textView2);
         editTextNickname = (EditText) findViewById(R.id.editTextNickname);
         radioButtonGruen = (RadioButton) findViewById(R.id.radioButtonGruen);
         radioButtonGelb = (RadioButton) findViewById(R.id.radioButtonGelb);
@@ -38,24 +40,50 @@ public class nickname extends Activity {
     }
 
 
-    public void onButtonClickOk(View v) {
-
-
+    public void onButtonClickOk(View v)
+    {
         if (editTextNickname.getText().toString().equals("")) {
             editTextNickname.setHint("Nicknamen auswählen!!");
+        }
 
+        else if (!radioButtonBlau.isChecked() && !radioButtonGelb.isChecked() && !radioButtonGruen.isChecked() && !radioButtonRot.isChecked()) {
+            textView2.setText("Farbe auswählen");
+        }
 
-        //if (radioButtonBlau.equals(false) && radioButtonGelb.equals(false) && radioButtonGruen.equals(false) && radioButtonRot.equals(false)) {
+        else if (radioButtonBlau.isChecked() && !radioButtonGelb.isChecked() && !radioButtonGruen.isChecked() && !radioButtonRot.isChecked()) {
+            textView2.setText("");
+            radioButtonRot.setClickable(false);
+            radioButtonGruen.setClickable(false);
+            radioButtonGelb.setClickable(false);
+        }
 
-        //     textViewNick.setText("Farbe Auswahälen");
-        //  }
+        else if (!radioButtonBlau.isChecked() && radioButtonGelb.isChecked() && !radioButtonGruen.isChecked() && !radioButtonRot.isChecked()) {
+            textView2.setText("");
+            radioButtonRot.setClickable(false);
+            radioButtonGruen.setClickable(false);
+            radioButtonBlau.setClickable(false);
+        }
 
+        else if (!radioButtonBlau.isChecked() && !radioButtonGelb.isChecked() && radioButtonGruen.isChecked() && !radioButtonRot.isChecked()) {
+            textView2.setText("");
+            radioButtonRot.setClickable(false);
+            radioButtonBlau.setClickable(false);
+            radioButtonGelb.setClickable(false);
+        }
 
+        else if (!radioButtonBlau.isChecked() && !radioButtonGelb.isChecked() && !radioButtonGruen.isChecked() && radioButtonRot.isChecked()) {
+            textView2.setText("");
+            radioButtonBlau.setClickable(false);
+            radioButtonGruen.setClickable(false);
+            radioButtonGelb.setClickable(false);
+        }
 
-            } else { Intent intent = new Intent(getApplicationContext(), GameActivity.class);
-            startActivity(intent);}
-
+        else
+        {
+            Intent intent = new Intent(getApplicationContext(), GameActivity.class);
+            startActivity(intent);
         }
     }
+}
 
 
