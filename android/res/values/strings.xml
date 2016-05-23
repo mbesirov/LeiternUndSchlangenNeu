@@ -6,5 +6,6 @@
     <string name="title_activity_network_connection">NetworkConnection</string>
     <string name="service_id">LeiternUndSchlangen</string>
     <string name="editTextNicknameHint">Dein Nickname</string>
+    <string name="spielfigur">Gib deinen gewünschten Nicknamen im unteren Feld ein und wähle deine Spielfigur:</string>
 
 </resources>
