@@ -26,7 +26,7 @@ public class GameView extends SurfaceView {
     Random rnd = new Random();
     //x = rnd.nextInt(theGameView.getWidth() - width);
     //y = rnd.nextInt(theGameView.getHeight() - height);
-    int wuerfel = rnd.nextInt((6 - 1) + 1) + 1;
+    int wuerfel = rnd.nextInt((6 ) + 1);
     private List<Sprite> spriteList = new ArrayList<Sprite>();
     private List<Integer> spriteListNum = new ArrayList<Integer>();
     private SurfaceHolder surfaceHolder;
@@ -223,7 +223,7 @@ public class GameView extends SurfaceView {
                         break;
                     }
 
-                        if ( sprite.getx() > -400 && sprite.gety() < 100) {
+                        if ( (sprite.getx() < -30 && sprite.gety() < 80) || sprite.gety() < 20) {
 
                             theGameActivity.onGameOver();
                         }

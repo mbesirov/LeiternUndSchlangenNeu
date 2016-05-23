@@ -43,8 +43,7 @@ public class Sprite {
        // x = -30;
 x=-30+theGameView.getWidth()/10*0;
       // y = theGameView.getHeight() - height - 50;
-     y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*0;
-
+    y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*0;
 
         //ySpeed = rnd.nextInt(10) - 4;
         //(xSpeed = rnd.nextInt(10) - 4;
@@ -276,6 +275,7 @@ x=-30+theGameView.getWidth()/10*0;
             links=false;
             rechts =true;
         }
+
 
         if (x < -40) {
             links = false;
