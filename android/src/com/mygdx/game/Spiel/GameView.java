@@ -123,14 +123,13 @@ public class GameView extends SurfaceView {
     private void createSprite(int index) {
         Bitmap bmp = null;
         switch (index) {
-
             case 0:
                 bmp = BitmapFactory.decodeResource(getResources(),
                         R.drawable.kegel_blau);
                 break;
             case 1:
                 bmp = BitmapFactory.decodeResource(getResources(),
-                        R.drawable.kegel_rot);
+                        R.drawable.kegel_lila);
                 break;
             case 2:
                 bmp = BitmapFactory.decodeResource(getResources(),
@@ -138,7 +137,7 @@ public class GameView extends SurfaceView {
                 break;
             case 3:
                 bmp = BitmapFactory.decodeResource(getResources(),
-                        R.drawable.kegel_lila);
+                        R.drawable.kegel_rot);
                 break;
         }
         Sprite sprite = new Sprite(this, bmp);
@@ -152,7 +151,7 @@ public class GameView extends SurfaceView {
 
             for (int j = 0; j < 1; j++)
 
-            createSprite(i);
+            createSprite(TokenColor.color);
 
 
         }
@@ -194,7 +193,7 @@ public class GameView extends SurfaceView {
 
 
 
-                        int wuerfel = rnd.nextInt((6 ) + 1);
+                        int wuerfel = rnd.nextInt((6 - 1) + 1) + 1;
                      /*   switch (wuerfel) {
                             case 1:
                                 wuerfel = 1;
@@ -217,17 +216,15 @@ public class GameView extends SurfaceView {
                             default:}
 */
 
-                        sprite.setxSpeed((getWidth()/10)*wuerfel);
-                       //sprite.setxSpeed(getWidth()/10*1);
+                       // sprite.setxSpeed((getWidth()/11)*wuerfel);
+                        sprite.setxSpeed(getWidth()/10*1);
                         sprite.setySpeed(getHeight()/10);
                         break;
                     }
 
                         if ( sprite.getx() > -400 && sprite.gety() < 100) {
-
                             theGameActivity.onGameOver();
                         }
-
 
                     }
 
