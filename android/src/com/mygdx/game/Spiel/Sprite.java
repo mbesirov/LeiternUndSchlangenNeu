@@ -267,14 +267,7 @@ x=-30+theGameView.getWidth()/10*0;
             rechts =true;
         }
 
-//Schlange 48-9
-
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 ) && (x>(((theGameView.getWidth()/10)*7) -30)-20) && (x<(((theGameView.getWidth()/10)*7 )-30)+20) ) {
-            y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10) * 0;
-            x = (theGameView.getWidth() / 10) * 8 - 40;
-            links=false;
-            rechts =true;
-        }
+//
 
 
         if (x < -40) {

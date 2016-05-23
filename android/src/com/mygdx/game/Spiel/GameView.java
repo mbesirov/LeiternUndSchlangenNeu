@@ -193,7 +193,7 @@ public class GameView extends SurfaceView {
 
 
 
-                        int wuerfel = rnd.nextInt((6 - 1) + 1) + 1;
+                        int wuerfel = rnd.nextInt((6 ) + 1);
                      /*   switch (wuerfel) {
                             case 1:
                                 wuerfel = 1;
@@ -216,8 +216,8 @@ public class GameView extends SurfaceView {
                             default:}
 */
 
-                       // sprite.setxSpeed((getWidth()/11)*wuerfel);
-                        sprite.setxSpeed(getWidth()/10*1);
+                       sprite.setxSpeed((getWidth()/10)*wuerfel);
+                       // sprite.setxSpeed(getWidth()/10*1);
                         sprite.setySpeed(getHeight()/10);
                         break;
                     }
@@ -226,7 +226,7 @@ public class GameView extends SurfaceView {
                         if ( (sprite.getx() < -30 && sprite.gety() < 80) || sprite.gety() < 20) {
 
 
-                     
+
                             theGameActivity.onGameOver();
                         }
 
