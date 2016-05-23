@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-
+import android.view.View.OnClickListener;
 import com.mygdx.game.Spiel.GameActivity;
 import com.mygdx.game.R;
 
@@ -32,6 +32,43 @@ public class nickname extends Activity {
         radioButtonBlau = (RadioButton) findViewById(R.id.radioButtonBlau);
         radioButtonRot = (RadioButton) findViewById(R.id.radioButtonRot);
 
+        radioButtonGruen.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                radioButtonGruen.setChecked(true);
+                radioButtonGelb.setChecked(false);
+                radioButtonBlau.setChecked(false);
+                radioButtonRot.setChecked(false);
+            }
+        });
+
+        radioButtonGelb.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                radioButtonGruen.setChecked(false);
+                radioButtonGelb.setChecked(true);
+                radioButtonBlau.setChecked(false);
+                radioButtonRot.setChecked(false);
+            }
+        });
+
+        radioButtonBlau.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                radioButtonGruen.setChecked(false);
+                radioButtonGelb.setChecked(false);
+                radioButtonBlau.setChecked(true);
+                radioButtonRot.setChecked(false);
+            }
+        });
+
+        radioButtonRot.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                radioButtonGruen.setChecked(false);
+                radioButtonGelb.setChecked(false);
+                radioButtonBlau.setChecked(false);
+                radioButtonRot.setChecked(true);
+            }
+        });
+
+
     }
 
     public void onButtonClickNickZurück(View v) {
@@ -39,47 +76,36 @@ public class nickname extends Activity {
         startActivity(intent);
     }
 
-
     public void onButtonClickOk(View v)
     {
         if (editTextNickname.getText().toString().equals("")) {
-            editTextNickname.setHint("Nicknamen auswählen!!");
+            editTextNickname.setHint("Nicknamen auswÃ¤hlen!!");
         }
 
         else if (!radioButtonBlau.isChecked() && !radioButtonGelb.isChecked() && !radioButtonGruen.isChecked() && !radioButtonRot.isChecked()) {
-            textView2.setText("Farbe auswählen");
+            textView2.setText("Farbe auswÃ¤hlen");
         }
 
-        else if (radioButtonBlau.isChecked() && !radioButtonGelb.isChecked() && !radioButtonGruen.isChecked() && !radioButtonRot.isChecked()) {
+        else if (radioButtonBlau.isChecked()) {
             textView2.setText("");
-            radioButtonRot.setClickable(false);
-            radioButtonGruen.setClickable(false);
-            radioButtonGelb.setClickable(false);
+            Intent intent = new Intent(getApplicationContext(), GameActivity.class);
+            startActivity(intent);
         }
 
-        else if (!radioButtonBlau.isChecked() && radioButtonGelb.isChecked() && !radioButtonGruen.isChecked() && !radioButtonRot.isChecked()) {
+        else if ( radioButtonGelb.isChecked()) {
             textView2.setText("");
-            radioButtonRot.setClickable(false);
-            radioButtonGruen.setClickable(false);
-            radioButtonBlau.setClickable(false);
+            Intent intent = new Intent(getApplicationContext(), GameActivity.class);
+            startActivity(intent);
         }
 
-        else if (!radioButtonBlau.isChecked() && !radioButtonGelb.isChecked() && radioButtonGruen.isChecked() && !radioButtonRot.isChecked()) {
+        else if (radioButtonGruen.isChecked()) {
             textView2.setText("");
-            radioButtonRot.setClickable(false);
-            radioButtonBlau.setClickable(false);
-            radioButtonGelb.setClickable(false);
+            Intent intent = new Intent(getApplicationContext(), GameActivity.class);
+            startActivity(intent);
         }
 
-        else if (!radioButtonBlau.isChecked() && !radioButtonGelb.isChecked() && !radioButtonGruen.isChecked() && radioButtonRot.isChecked()) {
+        else if (radioButtonRot.isChecked()) {
             textView2.setText("");
-            radioButtonBlau.setClickable(false);
-            radioButtonGruen.setClickable(false);
-            radioButtonGelb.setClickable(false);
-        }
-
-        else
-        {
             Intent intent = new Intent(getApplicationContext(), GameActivity.class);
             startActivity(intent);
         }
