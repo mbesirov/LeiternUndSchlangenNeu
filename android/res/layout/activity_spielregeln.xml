@@ -38,7 +38,8 @@
                 android:layout_height="468dp"
                 android:text="@string/textViewSpielregeln"
                 android:id="@+id/textViewSpielregeln"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:textColor="#000000" />
         </ScrollView>
 
     </GridLayout>
