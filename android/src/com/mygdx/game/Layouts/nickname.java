@@ -32,6 +32,9 @@ public class nickname extends Activity {
 
     }
 
+
+
+
     public void onButtonClickNickZurück(View v) {
         Intent intent = new Intent(getApplicationContext(), startscreen.class);
         startActivity(intent);

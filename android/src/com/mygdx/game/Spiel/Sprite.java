@@ -43,9 +43,9 @@ public class Sprite {
         //x = rnd.nextInt(theGameView.getWidth() - width);
         //y = rnd.nextInt(theGameView.getHeight() - height);
        // x = -30;
-x=-30+theGameView.getWidth()/10*1;
-  //     y = theGameView.getHeight() - height - 50;
-        y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*8;
+x=-30+theGameView.getWidth()/10*0;
+      // y = theGameView.getHeight() - height - 50;
+     y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*4;
 
         //ySpeed = rnd.nextInt(10) - 4;
         //(xSpeed = rnd.nextInt(10) - 4;
@@ -115,7 +115,7 @@ x=-30+theGameView.getWidth()/10*1;
 
         }
 //leiter 43 auf 77
-       if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 )&& (x>(theGameView.getWidth()/10*2 -30)-10 && x<(theGameView.getWidth()/10*2 -30)+10) ) {
+       if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-10 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+10 )&& (x>(theGameView.getWidth()/10*3 -30)-10 && x<(theGameView.getWidth()/10*3 -30)+10) ) {
 
 
             y = y - (theGameView.getHeight()/10)*3 ;

@@ -123,6 +123,7 @@ public class GameView extends SurfaceView {
     private void createSprite(int index) {
         Bitmap bmp = null;
         switch (index) {
+
             case 0:
                 bmp = BitmapFactory.decodeResource(getResources(),
                         R.drawable.kegel_blau);
@@ -193,7 +194,7 @@ public class GameView extends SurfaceView {
 
 
 
-                        int wuerfel = rnd.nextInt((6 - 1) + 1) + 1;
+                        int wuerfel = rnd.nextInt((6 ) + 1);
                      /*   switch (wuerfel) {
                             case 1:
                                 wuerfel = 1;
@@ -216,15 +217,17 @@ public class GameView extends SurfaceView {
                             default:}
 */
 
-                       // sprite.setxSpeed((getWidth()/11)*wuerfel);
-                        sprite.setxSpeed(getWidth()/10*1);
+                        //sprite.setxSpeed((getWidth()/10)*wuerfel);
+                       sprite.setxSpeed(getWidth()/10*1);
                         sprite.setySpeed(getHeight()/10);
                         break;
                     }
 
                         if ( sprite.getx() > -400 && sprite.gety() < 100) {
+
                             theGameActivity.onGameOver();
                         }
+
 
                     }
 
