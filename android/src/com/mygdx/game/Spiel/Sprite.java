@@ -12,7 +12,7 @@ public class Sprite {
     private int sprung;
     private int a;
     private int b;
-    private boolean kante;
+    public boolean vorbei;
     private int movex;
     private int diffx;
     private int diffy;
@@ -40,7 +40,7 @@ public class Sprite {
         //x = rnd.nextInt(theGameView.getWidth() - width);
         //y = rnd.nextInt(theGameView.getHeight() - height);
 
-       // x = -30;
+
 x=-30+theGameView.getWidth()/10*0;
       // y = theGameView.getHeight() - height - 50;
     y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*0;
@@ -82,6 +82,9 @@ x=-30+theGameView.getWidth()/10*0;
     public int gety() {
         return y;
     }
+
+
+
 
     private void bounceOff() {
 
@@ -267,7 +270,12 @@ x=-30+theGameView.getWidth()/10*0;
             rechts =true;
         }
 
-//
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------Game Over-----------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+
 
 
         if (x < -40) {
@@ -333,5 +341,7 @@ x=-30+theGameView.getWidth()/10*0;
     public boolean isTouched(float x2, float y2) {
         return x2 > x && x2 < x + width && y2 > y && y2 < y + height;
     }
+
+
 }
 

@@ -30,6 +30,7 @@ public class GameView extends SurfaceView {
     private List<Sprite> spriteList = new ArrayList<Sprite>();
     private List<Integer> spriteListNum = new ArrayList<Integer>();
     private SurfaceHolder surfaceHolder;
+    private boolean Ende;
     private Bitmap bmp;
     private Bitmap bmp2;
     private Bitmap bmp3;
@@ -49,6 +50,9 @@ public class GameView extends SurfaceView {
 
     @SuppressLint("WrongCall") public GameView(Context context) {
         super(context);
+
+
+
 
 
         theGameLoopThread = new GameLoopThread(this);
@@ -161,13 +165,21 @@ public class GameView extends SurfaceView {
 
 
 
+
     private void rndCreateSprite() {
         Random rnd = new Random(System.currentTimeMillis());
         int i = rnd.nextInt(4);
         createSprite(i);
     }
 
+    public void setEnde(boolean Vorbei) {
+        Ende = Vorbei;
+    }
 
+
+    public boolean getEnde() {
+        return Ende;
+    }
 
     public void setwuerfel(int wuerfel) {
 
@@ -216,14 +228,13 @@ public class GameView extends SurfaceView {
                             default:}
 */
 
-                       sprite.setxSpeed((getWidth()/10)*wuerfel);
-                       // sprite.setxSpeed(getWidth()/10*1);
+                       //sprite.setxSpeed((getWidth()/10)*wuerfel);
+                       sprite.setxSpeed(getWidth()/10*1);
                         sprite.setySpeed(getHeight()/10);
                         break;
                     }
 
-
-                        if ( (sprite.getx() < -30 && sprite.gety() < 80) || sprite.gety() < 20) {
+                        if ( (sprite.getx() <70 && sprite.gety() < -30)) {
 
 
 
