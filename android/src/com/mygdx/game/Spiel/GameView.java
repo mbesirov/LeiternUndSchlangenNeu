@@ -218,7 +218,7 @@ public class GameView extends SurfaceView {
 */
 
                         //sprite.setxSpeed((getWidth()/10)*wuerfel);
-                       sprite.setxSpeed(getWidth()/10*1);
+                       sprite.setxSpeed(getWidth()/10*2);
                         sprite.setySpeed(getHeight()/10);
                         break;
                     }

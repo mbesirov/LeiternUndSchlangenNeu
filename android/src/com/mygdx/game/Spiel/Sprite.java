@@ -39,18 +39,12 @@ public class Sprite {
         //Random rnd = new Random();
         //x = rnd.nextInt(theGameView.getWidth() - width);
         //y = rnd.nextInt(theGameView.getHeight() - height);
-<<<<<<< HEAD
+
        // x = -30;
 x=-30+theGameView.getWidth()/10*0;
       // y = theGameView.getHeight() - height - 50;
-     y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*4;
-=======
-        x = -30;
-        x=-30+theGameView.getWidth()/10*1;
-        //     y = theGameView.getHeight() - height - 50;
-        x=-30+theGameView.getWidth()/10*1;
-        y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*8;
->>>>>>> hrindler
+     y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*0;
+
 
         //ySpeed = rnd.nextInt(10) - 4;
         //(xSpeed = rnd.nextInt(10) - 4;
@@ -96,27 +90,26 @@ x=-30+theGameView.getWidth()/10*0;
 /*--------------------------------------------------------------Leitern-------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------*/
 //leiter 8 auf 26
-      if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*0)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*0)+30 ) && (x== (theGameView.getWidth()/10)*7 -30)) {
+     if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*0)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*0)+30 ) && (x== (theGameView.getWidth()/10)*7 -30)) {
             y = y - ySpeed * 2 ;
             x = (theGameView.getWidth()/10)*5 -40;
 
         }
 
 //leiter 21 auf 82
-    if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*2)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*2)+30 ) && (x>-50 && x<-5)) {
+   if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*2)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*2)+30 ) && (x>-50 && x<-5)) {
             y = y - (theGameView.getHeight()/10)* 6 ;
             x = (theGameView.getWidth()/10)*1 -40;
 
         }
 
 //leiter 43 auf 77
-<<<<<<< HEAD
-       if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-10 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+10 )&& (x>(theGameView.getWidth()/10*3 -30)-10 && x<(theGameView.getWidth()/10*3 -30)+10) ) {
 
 
-=======
-       if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 )&& (x>(theGameView.getWidth()/10*2 -30)-10 && x<(theGameView.getWidth()/10*2 -30)+10) ) {
->>>>>>> hrindler
+
+
+       if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 )&&  (x>(((theGameView.getWidth()/10)*2) -30)-20) && (x<(((theGameView.getWidth()/10)*2 )-30)+20) )  {
+
             y = y - (theGameView.getHeight()/10)*3 ;
             x = (theGameView.getWidth()/10)*3 -40;
             links=true;
@@ -125,13 +118,14 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //leiter 50 auf 91
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 )&& x<(theGameView.getWidth()/10*9 -30)+10)  {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 )&&  (x>(((theGameView.getWidth()/10)*9) -30)-20) && (x<(((theGameView.getWidth()/10)*9 )-30)+20) ) {
             y = y - (theGameView.getHeight() / 10) * 5;
             links = true;
             rechts = false;
         }
 
-//leiter 54 auf 93   geändert
+
+//leiter 54 auf 93
        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)+30 ) && (x>(theGameView.getWidth()/10*6 -30)-20 && x<(theGameView.getWidth()/10*6 -30)+20) ) {
             y = y - (theGameView.getHeight() / 10) * 4;
              x = (theGameView.getWidth()/10)*7 -40;
@@ -139,8 +133,9 @@ x=-30+theGameView.getWidth()/10*0;
             rechts = false;
         }
 
+
 //leiter 66 auf 87
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)+30 )&& x<(theGameView.getWidth()/10*5 -30)+10)  {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)+30 )&&  (x>(((theGameView.getWidth()/10)*5) -30)-20) && (x<(((theGameView.getWidth()/10)*5 )-30)+20) )  {
             y = y - (theGameView.getHeight() / 10) * 2;
             x = (theGameView.getWidth()/10)*6 -40;
            rechts=true;
@@ -148,7 +143,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
         // leiter 62 auf 96
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)+30 )&& (x>(theGameView.getWidth()/10*1 -30)-10 && x<(theGameView.getWidth()/10*1 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)+30 )&& (x>(((theGameView.getWidth()/10)*1) -30)-20) && (x<(((theGameView.getWidth()/10)*1 )-30)+20) ) {
             y = y - (theGameView.getHeight() / 10) * 3;
             x = (theGameView.getWidth()/10)*4 -40;
             links=true;
@@ -168,7 +163,7 @@ x=-30+theGameView.getWidth()/10*0;
 /*----------------------------------------------------------------------------------------------------------------------*/
 
 //Schlange 98-28
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)+30 ) && (x>(theGameView.getWidth()/10*2 -30)-10 && x<(theGameView.getWidth()/10*2 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)+30 ) && (x>(theGameView.getWidth()/10*2 -30)-20 && x<(theGameView.getWidth()/10*2 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10) * 2;
             x = (theGameView.getWidth() / 10) * 7 - 40;
             links=false;
@@ -176,7 +171,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //Schlange 95-24
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)+30 ) && (x>(theGameView.getWidth()/10*5 -30)-10 && x<(theGameView.getWidth()/10*5 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)+30 ) && (x>(theGameView.getWidth()/10*5 -30)-20 && x<(theGameView.getWidth()/10*5 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10) * 2;
             x = (theGameView.getWidth() / 10) * 3 - 40;
             links=false;
@@ -184,7 +179,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //Schlange 92-51
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)+30 ) && (x>(theGameView.getWidth()/10*8 -30)-10 && x<(theGameView.getWidth()/10*8 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*9)+30 ) && (x>(theGameView.getWidth()/10*8 -30)-20 && x<(theGameView.getWidth()/10*8 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10) * 5;
             x = (theGameView.getWidth() / 10) * 9 - 40;
             links=true;
@@ -192,7 +187,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 // Schlange 83-19
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*8)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*8)+30 ) && (x>(theGameView.getWidth()/10*2 -30)-10 && x<(theGameView.getWidth()/10*2 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*8)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*8)+30 ) && (x>(theGameView.getWidth()/10*2 -30)-20 && x<(theGameView.getWidth()/10*2 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10) * 1;
             x = (theGameView.getWidth() / 10) * 1 - 40;
             links=true;
@@ -200,7 +195,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //Schlange 73-1
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*7)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*7)+30 ) && (x>(theGameView.getWidth()/10*7 -30)-10 && x<(theGameView.getWidth()/10*7 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*7)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*7)+30 ) && (x>(theGameView.getWidth()/10*7 -30)-20 && x<(theGameView.getWidth()/10*7 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10);
             x = (theGameView.getWidth() / 10) - 40;
             links=false;
@@ -208,7 +203,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //Schlange 69-33
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)+30 ) && (x>(theGameView.getWidth()/10*4 -30)-10 && x<(theGameView.getWidth()/10*4 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)+30 ) && (x>(theGameView.getWidth()/10*4 -30)-20 && x<(theGameView.getWidth()/10*4 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10) * 3;
             x = (theGameView.getWidth() / 10) * 7 - 40;
             links=true;
@@ -216,7 +211,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //Schlange 64-36
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*8)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*8)+30 ) && (x>(theGameView.getWidth()/10*2 -30)-10 && x<(theGameView.getWidth()/10*2 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*8)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*8)+30 ) && (x>(theGameView.getWidth()/10*2 -30)-20 && x<(theGameView.getWidth()/10*2 -30)+20) ) {
             //y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10) * 1;
             //x = (theGameView.getWidth() / 10) * 1 - 40;
             links=true;
@@ -224,7 +219,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //Schlange 59-17
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)+30 ) && (x>(theGameView.getWidth()/10*1 -30)-10 && x<(theGameView.getWidth()/10*1 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)+30 ) && (x>(theGameView.getWidth()/10*1 -30)-20 && x<(theGameView.getWidth()/10*1 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10) * 1;
             x = (theGameView.getWidth() / 10) * 3 - 40;
             links=true;
@@ -232,7 +227,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //Schlange 55-7
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)+30 ) && (x>(theGameView.getWidth()/10*5 -30)-10 && x<(theGameView.getWidth()/10*5 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)+30 ) && (x>(theGameView.getWidth()/10*5 -30)-20 && x<(theGameView.getWidth()/10*5 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10);
             x = (theGameView.getWidth() / 10) * 3 - 40;
             links=false;
@@ -248,7 +243,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //Schlange 48-9
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 ) && (x>(theGameView.getWidth()/10*7 -30)-10 && x<(theGameView.getWidth()/10*7 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 ) && (x>(theGameView.getWidth()/10*7 -30)-20 && x<(theGameView.getWidth()/10*7 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10);
             x = (theGameView.getWidth() / 10) * 8 - 40;
             links=false;
@@ -256,7 +251,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //Schlange 46-5
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 ) && (x>(theGameView.getWidth()/10*5 -30)-10 && x<(theGameView.getWidth()/10*5 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 ) && (x>(theGameView.getWidth()/10*5 -30)-20 && x<(theGameView.getWidth()/10*5 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10);
             x = (theGameView.getWidth() / 10) * 4 - 40;
             links=false;
@@ -264,7 +259,7 @@ x=-30+theGameView.getWidth()/10*0;
         }
 
 //Schlange 44-22
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 ) && (x>(theGameView.getWidth()/10*3 -30)-10 && x<(theGameView.getWidth()/10*3 -30)+10) ) {
+        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 ) && (x>(theGameView.getWidth()/10*3 -30)-20 && x<(theGameView.getWidth()/10*3 -30)+20) ) {
             y = theGameView.getHeight()-height-50-(theGameView.getHeight() / 10) * 2;
             x = (theGameView.getWidth() / 10) * 1 - 40;
             links=false;
@@ -277,6 +272,8 @@ x=-30+theGameView.getWidth()/10*0;
             a = 0;
 
         }
+
+
 
 // links rauf
         if ((x > theGameView.getWidth() - width - xSpeed+theGameView.getWidth()/10) && (xSpeed >= theGameView.getWidth() / 10) && links == false) {
