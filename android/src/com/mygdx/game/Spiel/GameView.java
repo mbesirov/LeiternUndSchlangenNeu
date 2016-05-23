@@ -222,12 +222,11 @@ public class GameView extends SurfaceView {
                         break;
                     }
 
-<<<<<<< HEAD
+
                         if ( (sprite.getx() < -30 && sprite.gety() < 80) || sprite.gety() < 20) {
 
-=======
-                        if ( sprite.getx() > -400 && sprite.gety() < 100) {
->>>>>>> test
+
+                     
                             theGameActivity.onGameOver();
                         }
 
