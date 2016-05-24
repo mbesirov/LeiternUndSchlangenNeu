@@ -5,5 +5,6 @@ package com.mygdx.game.Spiel;
  */
 public class TokenColor {
     public static int color;
+    public static boolean won=false;
 
 }

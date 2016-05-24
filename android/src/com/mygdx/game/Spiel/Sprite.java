@@ -1,5 +1,6 @@
 package com.mygdx.game.Spiel;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
@@ -298,7 +299,7 @@ x=-30+theGameView.getWidth()/10*0;
             if (diffx < -30) {
                 y = y - ySpeed;
                 ySpeed = 0;
-                x = x-40+ diffx + theGameView.getWidth() / 5;
+                x = x-30+ diffx + theGameView.getWidth() / 5;
                 xSpeed = 0;
             }
         }
@@ -331,11 +332,15 @@ x=-30+theGameView.getWidth()/10*0;
                 x = x + diffx -width+20+ theGameView.getWidth() / 5;
                 xSpeed = 0;
             }
+
         }
     }
     public void onDraw(Canvas canvas) {
         bounceOff();
         canvas.drawBitmap(bmp, x, y, null);
+        if ( x<70 && y < -30) {
+            TokenColor.won=true;
+        }
     }
 
     public boolean isTouched(float x2, float y2) {
