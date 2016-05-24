@@ -64,12 +64,10 @@ public class GameView extends SurfaceView {
                 boolean retry = true;
                 theGameLoopThread.setRunning(false);
                 while(retry){
-                    try {
+                   
                         theGameLoopThread.join();
                         retry=false;
-                    }catch(InterruptedException e){
-
-                    }
+                    
                 }
 
             }
