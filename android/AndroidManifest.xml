@@ -44,7 +44,11 @@
         <activity
             android:name=".Spiel.GameActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Layouts.GameOverActivity"></activity>
+        <activity android:name=".Spiel.GameOverActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

@@ -53,13 +53,19 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="32dp"
+
+        android:checked="false"
+        android:nestedScrollingEnabled="false"
+        android:onClick="onButtonClicradioButtonGelb"
+
         android:clickable="true" />
+
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New RadioButton"
-        android:id="@+id/radioButtonLila"
+        android:id="@+id/radioButtonGelb"
         android:width="70dp"
         android:layout_alignTop="@+id/radioButtonBlau"
         android:layout_toLeftOf="@+id/imageView4"
@@ -70,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New RadioButton"
-        android:id="@+id/radioButtonSchwarz"
+        android:id="@+id/radioButtonGruen"
         android:width="70dp"
         android:layout_below="@+id/radioButtonBlau"
         android:layout_alignParentLeft="true"
@@ -85,8 +91,8 @@
         android:id="@+id/radioButtonRot"
         android:width="70dp"
         android:layout_alignTop="@+id/imageView5"
-        android:layout_alignLeft="@+id/radioButtonLila"
-        android:layout_alignStart="@+id/radioButtonLila"
+        android:layout_alignLeft="@+id/radioButtonGelb"
+        android:layout_alignStart="@+id/radioButtonGelb"
         android:clickable="true" />
 
     <TextView
@@ -106,7 +112,7 @@
         android:id="@+id/imageView3"
         android:src="@drawable/kegel_blau"
         android:layout_alignTop="@+id/radioButtonBlau"
-        android:layout_above="@+id/radioButtonSchwarz"
+        android:layout_above="@+id/radioButtonGruen"
         android:layout_alignRight="@+id/buttonNickZurück"
         android:layout_alignEnd="@+id/buttonNickZurück" />
 
@@ -116,20 +122,20 @@
         android:id="@+id/imageView4"
         android:src="@drawable/kegel_lila"
         android:contentDescription="gelb"
-        android:layout_alignTop="@+id/radioButtonLila"
+        android:layout_alignTop="@+id/radioButtonGelb"
         android:layout_alignLeft="@+id/buttonOk"
         android:layout_alignStart="@+id/buttonOk"
-        android:layout_alignBottom="@+id/radioButtonLila" />
+        android:layout_alignBottom="@+id/radioButtonGelb" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView5"
         android:src="@drawable/kegel_schwarz"
-        android:layout_alignTop="@+id/radioButtonSchwarz"
+        android:layout_alignTop="@+id/radioButtonGruen"
         android:layout_alignRight="@+id/imageView3"
         android:layout_alignEnd="@+id/imageView3"
-        android:layout_alignBottom="@+id/radioButtonSchwarz"
+        android:layout_alignBottom="@+id/radioButtonGruen"
         android:layout_alignLeft="@+id/imageView3"
         android:layout_alignStart="@+id/imageView3" />
 
@@ -149,7 +155,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
-        android:layout_below="@+id/radioButtonSchwarz"
+        android:layout_below="@+id/radioButtonGruen"
         android:layout_alignLeft="@+id/imageView5"
         android:layout_alignStart="@+id/imageView5"
         android:layout_alignRight="@+id/imageView6"

@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Layouts.GameOverActivity"
+    tools:context=".Spiel.GameOverActivity"
     android:background="#5b7ad6">
 
     <TextView

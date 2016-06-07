@@ -14,10 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Neues Spiel"
-        android:id="@+id/buttonNewGame"
-        android:layout_alignTop="@+id/buttonExit"
-        android:onClick="onButtonClickNewGame"
-
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/button2"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView" />
 
@@ -25,8 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Exit"
-        android:onClick="onButtonClickExit"
-        android:id="@+id/buttonExit"
+        android:id="@+id/button2"
         android:width="100dp"
         android:layout_marginTop="89dp"
         android:layout_below="@+id/textView"

@@ -1,9 +1,9 @@
-package com.mygdx.game.Spiel;
+package com.mygdx.game.Layouts;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -11,74 +11,35 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.mygdx.game.Layouts.wuerfeln;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.mygdx.game.R;
 
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static android.content.Context.CONTEXT_INCLUDE_CODE;
-
-
-public class GameActivity extends Activity implements DialogInterface.OnDismissListener {
-    private Dialog dialog;
-    private GameView theGameView;
-    private boolean firstStart=true;
-    private boolean dialogActive=false;
+/**
+ * Created by Lisa on 03.06.2016.
+ */
+public class wuerfeln extends Activity {
     ImageView dice_picture;
     Random rng=new Random();
     Handler handler;	//würfel starten
     Timer timer=new Timer();
     boolean rolling=false;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(new GameView(this));
-        //dice_picture = (ImageView) findViewById(R.id.würfel);
-       // handler=new Handler(callback);
-
-            dialog = new Dialog(this, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
-            setContentView(new View(this));
-            dialog.setContentView(R.layout.wuerfeln);
-            dialog.hide();
-            dialog.setOnDismissListener(this);
-            initialize();
-           // dialog.show();
-    }
-    public void onDismiss(DialogInterface dialog){
-        dialogState();
-    }
-
-    public void dialogState() {
-        if (dialogActive){
-            dialog.hide();
-            dialogActive=false;
-            theGameView.resumeThread();
-        }else if (!dialogActive){
-            theGameView.pauseThread();
-            dialog.show();
-            dialogActive=true;
-        }
-    }
-    private void initialize() {
+       /* Dialog dialog = new Dialog(this, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
+        setContentView(new View(this));
+        dialog.setContentView(R.layout.wuerfeln);
+        dialog.show();*/
         dice_picture = (ImageView) findViewById(R.id.würfel);
         handler=new Handler(callback);
-       /* resume = (Button) dialog.findViewById(R.id.bContinue);
-        menu = (Button) dialog.findViewById(R.id.bMainMneu);
-        newTry = (Button) dialog.findViewById(R.id.bNewTry);
-        resume.setOnClickListener(this);
-        menu.setOnClickListener(this);
-        newTry.setOnClickListener(this);*/
-    }
 
-    public void onGameOver() {
-        Intent theNextIntent = new Intent(getApplicationContext(), GameOverActivity.class);
-        startActivity(theNextIntent);
-        this.finish();
     }
-
 
     //User klickt auf würfel, start
     public void HandleClick(View arg0) {
@@ -123,26 +84,15 @@ public class GameActivity extends Activity implements DialogInterface.OnDismissL
             return true;
         }
     };
-    @Override
-    public void onBackPressed() {
-        dialogState();
-    }
+
     //Clean up
     @Override
     protected void onPause() {
         super.onPause();
-    }
-    protected void onResume(){
-        super.onResume();
-        if(!firstStart){
-            dialog.show();
-
-
-        }
     }
     protected void onDestroy() {
         super.onDestroy();
         timer.cancel();
 
     }
-    }
+}

@@ -1,6 +1,7 @@
 package com.mygdx.game.Spiel;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,12 +10,15 @@ import android.graphics.RectF;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.Button;
 
 import com.mygdx.game.R;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import static android.R.style.Theme_Translucent_NoTitleBar_Fullscreen;
 
 /**
  * Created by Moers on 12.05.16.
@@ -26,11 +30,10 @@ public class GameView extends SurfaceView {
     Random rnd = new Random();
     //x = rnd.nextInt(theGameView.getWidth() - width);
     //y = rnd.nextInt(theGameView.getHeight() - height);
-    int wuerfel = rnd.nextInt((6 ) + 1);
+    int wuerfel = rnd.nextInt((6 - 1) + 1) + 1;
     private List<Sprite> spriteList = new ArrayList<Sprite>();
     private List<Integer> spriteListNum = new ArrayList<Integer>();
     private SurfaceHolder surfaceHolder;
-    private boolean Ende;
     private Bitmap bmp;
     private Bitmap bmp2;
     private Bitmap bmp3;
@@ -47,12 +50,16 @@ public class GameView extends SurfaceView {
     private boolean createSprites= true;
     private long lastClick;
 
-
+public void pauseThread(){
+    theGameLoopThread.setRunning(false);
+}
+    public void resumeThread(){
+        theGameLoopThread=new GameLoopThread(this);
+        theGameLoopThread.setRunning(true);
+        theGameLoopThread.start();
+    }
     @SuppressLint("WrongCall") public GameView(Context context) {
         super(context);
-
-
-
 
 
         theGameLoopThread = new GameLoopThread(this);
@@ -127,13 +134,14 @@ public class GameView extends SurfaceView {
     private void createSprite(int index) {
         Bitmap bmp = null;
         switch (index) {
+
             case 0:
                 bmp = BitmapFactory.decodeResource(getResources(),
                         R.drawable.kegel_blau);
                 break;
             case 1:
                 bmp = BitmapFactory.decodeResource(getResources(),
-                        R.drawable.kegel_lila);
+                        R.drawable.kegel_rot);
                 break;
             case 2:
                 bmp = BitmapFactory.decodeResource(getResources(),
@@ -141,7 +149,7 @@ public class GameView extends SurfaceView {
                 break;
             case 3:
                 bmp = BitmapFactory.decodeResource(getResources(),
-                        R.drawable.kegel_rot);
+                        R.drawable.kegel_lila);
                 break;
         }
         Sprite sprite = new Sprite(this, bmp);
@@ -155,13 +163,12 @@ public class GameView extends SurfaceView {
 
             for (int j = 0; j < 1; j++)
 
-            createSprite(TokenColor.color);
+            createSprite(i);
 
 
         }
         createSprites = false;
     }
-
 
 
 
@@ -172,14 +179,7 @@ public class GameView extends SurfaceView {
         createSprite(i);
     }
 
-    public void setEnde(boolean Vorbei) {
-        Ende = Vorbei;
-    }
 
-
-    public boolean getEnde() {
-        return Ende;
-    }
 
     public void setwuerfel(int wuerfel) {
 
@@ -200,53 +200,26 @@ public class GameView extends SurfaceView {
             synchronized (getHolder()) {
                 for (int i = spriteList.size() - 1; i >= 0; i--) {
                     Sprite sprite = spriteList.get(i);
+
                     if (sprite.isTouched(event.getX(), event.getY())) {
+                    //theGameActivity.wuerfel();
 
-
-
-
-                        int wuerfel = rnd.nextInt((6 ) + 1);
-                     /*   switch (wuerfel) {
-                            case 1:
-                                wuerfel = 1;
-                                break;
-                            case 2:
-                                wuerfel = 2;
-                                break;
-                            case 3:
-                                wuerfel = 3;
-                                break;
-                            case 4:
-                                wuerfel = 4;
-                                break;
-                            case 5:
-                                wuerfel = 5;
-                                break;
-                            case 6:
-                                wuerfel = 6;
-                                break;
-                            default:}
-*/
-
-                       //sprite.setxSpeed((getWidth()/10)*wuerfel);
-                       sprite.setxSpeed(getWidth()/10*1);
-                        sprite.setySpeed(getHeight()/10);
+                        sprite.setxSpeed((getWidth() / 10) * wuerfel);
+                        //sprite.setxSpeed(getWidth()/10*1);
+                        sprite.setySpeed(getHeight() / 10);
                         break;
                     }
 
-                        if ( (sprite.getx() <70 && sprite.gety() < -30)) {
-
-
+                        if (sprite.getx() > -400 && sprite.gety() < 100) {
 
                             theGameActivity.onGameOver();
                         }
 
                     }
 
-
                 }
-            }
 
+            }
 
         return true;
     }
