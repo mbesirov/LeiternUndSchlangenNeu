@@ -44,7 +44,9 @@
         <activity
             android:name=".Spiel.GameActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Layouts.GameOverActivity"></activity>
+        <activity android:name=".Layouts.GameOverActivity" />
+
+
     </application>
 
 </manifest>

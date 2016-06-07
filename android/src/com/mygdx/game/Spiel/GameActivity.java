@@ -9,6 +9,10 @@ import com.mygdx.game.Layouts.GameOverActivity;
 
 public class GameActivity extends Activity {
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

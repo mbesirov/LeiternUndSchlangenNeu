@@ -47,6 +47,7 @@ public class GameView extends SurfaceView {
     private boolean createSprites= true;
     private long lastClick;
 
+
     @SuppressLint("WrongCall") public GameView(Context context) {
         super(context);
 
@@ -64,10 +65,12 @@ public class GameView extends SurfaceView {
                 boolean retry = true;
                 theGameLoopThread.setRunning(false);
                 while(retry){
-                   
+                    try {
                         theGameLoopThread.join();
                         retry=false;
-                    
+                    }catch(InterruptedException e){
+
+                    }
                 }
 
             }
@@ -103,7 +106,7 @@ public class GameView extends SurfaceView {
     protected void onDraw(Canvas canvas) {
         //canvas.drawColor(Color.DKGRAY);
         drawBackground(canvas);
-        TokenColor.won=false;
+
 
         if(createSprites==true){
 
@@ -225,13 +228,18 @@ public class GameView extends SurfaceView {
                             default:}
 */
 
-                       //sprite.setxSpeed((getWidth()/10)*wuerfel);
-                       sprite.setxSpeed(getWidth()/10*wuerfel);
+                       sprite.setxSpeed((getWidth()/10)*wuerfel);
+                       //sprite.setxSpeed(getWidth()/10*1);
                         sprite.setySpeed(getHeight()/10);
-
                         break;
                     }
 
+                        if ( (sprite.getx() <70 && sprite.gety() < -30)) {
+
+
+
+                            theGameActivity.onGameOver();
+                        }
 
                     }
 
@@ -239,10 +247,7 @@ public class GameView extends SurfaceView {
                 }
             }
 
-        if(TokenColor.won==true){
-            theGameActivity.onGameOver();
-            System.out.println("Gewonnen");
-        }
+
         return true;
     }
 
