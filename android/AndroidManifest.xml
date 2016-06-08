@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:theme="@style/GdxTheme">
         <activity
-            android:name=".Layouts.startscreen"
+            android:name="game.Layouts.startscreen"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,24 +27,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Layouts.suchen"
+            android:name="game.Layouts.suchen"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Layouts.spielregeln"
+            android:name="game.Layouts.spielregeln"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AndroidLauncher"
+            android:name="game.AndroidLauncher"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Layouts.nickname"
+            android:name="game.Layouts.nickname"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".NetworkConnection"
+            android:name="game.NetworkConnection"
             android:label="@string/title_activity_network_connection" />
         <activity
-            android:name=".Spiel.GameActivity"
+            android:name="game.Spiel.GameActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Spiel.GameOverActivity"></activity>
+        <activity android:name="game.Layouts.GameOverActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.mygdx.game.Spiel;
+package game.Spiel;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -41,9 +41,9 @@ public class Sprite {
         //y = rnd.nextInt(theGameView.getHeight() - height);
 
 
-        x=-30+theGameView.getWidth()/10*0;
-        // y = theGameView.getHeight() - height - 50;
-        y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*0;
+x=-30+theGameView.getWidth()/10*0;
+      // y = theGameView.getHeight() - height - 50;
+    y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*0;
 
         //ySpeed = rnd.nextInt(10) - 4;
         //(xSpeed = rnd.nextInt(10) - 4;
@@ -93,25 +93,21 @@ public class Sprite {
 /*--------------------------------------------------------------Leitern-------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------*/
 //leiter 8 auf 26
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*0)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*0)+30 ) && (x== (theGameView.getWidth()/10)*7 -30)) {
+   if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*0)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*0)+30 ) && (x== (theGameView.getWidth()/10)*7 -30)) {
             y = y - ySpeed * 2 ;
             x = (theGameView.getWidth()/10)*5 -40;
 
         }
 
 //leiter 21 auf 82
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*2)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*2)+30 ) && (x>-50 && x<-5)) {
+   if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*2)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*2)+30 ) && (x>-50 && x<-5)) {
             y = y - (theGameView.getHeight()/10)* 6 ;
             x = (theGameView.getWidth()/10)*1 -40;
 
         }
 
 //leiter 43 auf 77
-
-
-
-
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 )&&  (x>(((theGameView.getWidth()/10)*2) -30)-20) && (x<(((theGameView.getWidth()/10)*2 )-30)+20) )  {
+       if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*4)+30 )&&  (x>(((theGameView.getWidth()/10)*2) -30)-20) && (x<(((theGameView.getWidth()/10)*2 )-30)+20) )  {
 
             y = y - (theGameView.getHeight()/10)*3 ;
             x = (theGameView.getWidth()/10)*3 -40;
@@ -129,9 +125,9 @@ public class Sprite {
 
 
 //leiter 54 auf 93
-        if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)+30 ) && (x>(theGameView.getWidth()/10*6 -30)-20 && x<(theGameView.getWidth()/10*6 -30)+20) ) {
+       if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*5)+30 ) && (x>(theGameView.getWidth()/10*6 -30)-20 && x<(theGameView.getWidth()/10*6 -30)+20) ) {
             y = y - (theGameView.getHeight() / 10) * 4;
-            x = (theGameView.getWidth()/10)*7 -40;
+             x = (theGameView.getWidth()/10)*7 -40;
             links = true;
             rechts = false;
         }
@@ -141,7 +137,7 @@ public class Sprite {
         if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*6)+30 )&&  (x>(((theGameView.getWidth()/10)*5) -30)-20) && (x<(((theGameView.getWidth()/10)*5 )-30)+20) )  {
             y = y - (theGameView.getHeight() / 10) * 2;
             x = (theGameView.getWidth()/10)*6 -40;
-            rechts=true;
+           rechts=true;
             links =false;
         }
 
@@ -274,18 +270,11 @@ public class Sprite {
 /*----------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------Game Over-----------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------*/
-
-
-
-
         if (x < -40) {
             links = false;
             rechts = true;
             a = 0;
-
         }
-
-
 
 // links rauf
         if ((x > theGameView.getWidth() - width - xSpeed+theGameView.getWidth()/10) && (xSpeed >= theGameView.getWidth() / 10) && links == false) {
@@ -318,14 +307,14 @@ public class Sprite {
             xSpeed = 0;
         }
 
-        if (x - xSpeed < -40 && rechts == false) {
+       if (x - xSpeed < -40 && rechts == false) {
             rechts = true;
             links = false;
             diffx = (-30 - width - xSpeed) - x;
             x=-30;
             xSpeed = 0;
 
-            if (diffx >-200) {
+           if (diffx >-200) {
                 y = y - ySpeed;
                 ySpeed = 0;
                 x = x + diffx -width+20+ theGameView.getWidth() / 5;
@@ -344,3 +333,4 @@ public class Sprite {
 
 
 }
+

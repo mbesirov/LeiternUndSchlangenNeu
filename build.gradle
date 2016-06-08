@@ -4,7 +4,8 @@ buildscript {
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'com.android.tools.build:gradle:2.1.2'
+
     }
 }
 
@@ -49,6 +50,11 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-arm64-v8a"
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86_64"
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            testCompile 'junit:junit:4.12'
+            compile 'com.android.support:appcompat-v7:23.1.1'
+            compile 'com.android.support:design:23.1.1'
+
     }
 }
 

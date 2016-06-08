@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Layouts.spielregeln"
+    tools:context="game.Layouts.spielregeln"
     android:background="#ffffff">
 
     <Button
@@ -38,7 +38,8 @@
                 android:layout_height="468dp"
                 android:text="@string/textViewSpielregeln"
                 android:id="@+id/textViewSpielregeln"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:textColor="#000000" />
         </ScrollView>
 
     </GridLayout>
