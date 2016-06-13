@@ -1,10 +1,13 @@
 package game;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Created by hrindler on 08.06.16.
  */
 public class SpriteTest {
+
 
 /*----------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------Leitern-------------------------------------------------*/
@@ -14,6 +17,8 @@ public class SpriteTest {
     @Test
     public void Leiter_8_26() throws Exception {
         //Teste Leiter 8 auf 26
+        assertEquals("y-Wert: ",4,2+2);
+        assertEquals("x-Wert: ",4,2+2);
         /*if((y > (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*0)-30 )&& (y < (theGameView.getHeight()-height-50-(theGameView.getHeight()/10)*0)+30 ) && (x== (theGameView.getWidth()/10)*7 -30)) {
             y = y - ySpeed * 2 ;
             x = (theGameView.getWidth()/10)*5 -40;

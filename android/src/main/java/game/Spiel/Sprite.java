@@ -41,8 +41,8 @@ public class Sprite {
         //y = rnd.nextInt(theGameView.getHeight() - height);
 
 
-x=-30+theGameView.getWidth()/10*0;
-      // y = theGameView.getHeight() - height - 50;
+    x=-30+theGameView.getWidth()/10*0;
+        // y = theGameView.getHeight() - height - 50;
     y = theGameView.getHeight() - height - 50-theGameView.getHeight()/10*0;
 
         //ySpeed = rnd.nextInt(10) - 4;
